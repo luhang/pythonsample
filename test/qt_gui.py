@@ -1,0 +1,95 @@
+# -*- coding: utf-8 -*-
+
+# Form implementation generated from reading ui file 'qt_gui.ui'
+#
+# Created by: PyQt5 UI code generator 5.9.2
+#
+# WARNING! All changes made in this file will be lost!
+
+from PyQt5 import QtCore, QtGui, QtWidgets
+
+class Ui_MainWindow(object):
+    def setupUi(self, MainWindow):
+        MainWindow.setObjectName("MainWindow")
+        MainWindow.resize(863, 605)
+        self.centralwidget = QtWidgets.QWidget(MainWindow)
+        self.centralwidget.setObjectName("centralwidget")
+        self.labelShowImg = QtWidgets.QLabel(self.centralwidget)
+        self.labelShowImg.setGeometry(QtCore.QRect(350, 0, 500, 200))
+        font = QtGui.QFont()
+        font.setPointSize(9)
+        self.labelShowImg.setFont(font)
+        self.labelShowImg.setText("")
+        self.labelShowImg.setPixmap(QtGui.QPixmap(":/re/python-powered.png"))
+        self.labelShowImg.setAlignment(QtCore.Qt.AlignCenter)
+        self.labelShowImg.setObjectName("labelShowImg")
+        self.buttonTalk = QtWidgets.QPushButton(self.centralwidget)
+        self.buttonTalk.setGeometry(QtCore.QRect(690, 520, 160, 40))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.buttonTalk.setFont(font)
+        self.buttonTalk.setObjectName("buttonTalk")
+        self.listidgetLog = QtWidgets.QListWidget(self.centralwidget)
+        self.listidgetLog.setGeometry(QtCore.QRect(10, 0, 340, 500))
+        font = QtGui.QFont()
+        font.setPointSize(10)
+        self.listidgetLog.setFont(font)
+        self.listidgetLog.setFrameShape(QtWidgets.QFrame.StyledPanel)
+        self.listidgetLog.setVerticalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
+        self.listidgetLog.setHorizontalScrollBarPolicy(QtCore.Qt.ScrollBarAsNeeded)
+        self.listidgetLog.setAutoScroll(True)
+        self.listidgetLog.setHorizontalScrollMode(QtWidgets.QAbstractItemView.ScrollPerItem)
+        self.listidgetLog.setObjectName("listidgetLog")
+        self.lineEdit = QtWidgets.QLineEdit(self.centralwidget)
+        self.lineEdit.setGeometry(QtCore.QRect(10, 520, 680, 40))
+        font = QtGui.QFont()
+        font.setPointSize(14)
+        self.lineEdit.setFont(font)
+        self.lineEdit.setObjectName("lineEdit")
+        self.listResponse = QtWidgets.QListWidget(self.centralwidget)
+        self.listResponse.setGeometry(QtCore.QRect(360, 200, 490, 300))
+        palette = QtGui.QPalette()
+        brush = QtGui.QBrush(QtGui.QColor(85, 170, 127))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Active, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(85, 170, 127))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Inactive, QtGui.QPalette.Base, brush)
+        brush = QtGui.QBrush(QtGui.QColor(240, 240, 240))
+        brush.setStyle(QtCore.Qt.SolidPattern)
+        palette.setBrush(QtGui.QPalette.Disabled, QtGui.QPalette.Base, brush)
+        self.listResponse.setPalette(palette)
+        font = QtGui.QFont()
+        font.setPointSize(7)
+        self.listResponse.setFont(font)
+        self.listResponse.setContextMenuPolicy(QtCore.Qt.NoContextMenu)
+        self.listResponse.setMidLineWidth(4)
+        self.listResponse.setObjectName("listResponse")
+        MainWindow.setCentralWidget(self.centralwidget)
+        self.menubar = QtWidgets.QMenuBar(MainWindow)
+        self.menubar.setGeometry(QtCore.QRect(0, 0, 863, 21))
+        self.menubar.setObjectName("menubar")
+        self.menu_1 = QtWidgets.QMenu(self.menubar)
+        self.menu_1.setObjectName("menu_1")
+        MainWindow.setMenuBar(self.menubar)
+        self.statusbar = QtWidgets.QStatusBar(MainWindow)
+        self.statusbar.setObjectName("statusbar")
+        MainWindow.setStatusBar(self.statusbar)
+        self.menuClose = QtWidgets.QAction(MainWindow)
+        self.menuClose.setObjectName("menuClose")
+        self.menu_1.addAction(self.menuClose)
+        self.menubar.addAction(self.menu_1.menuAction())
+
+        self.retranslateUi(MainWindow)
+        self.buttonTalk.clicked.connect(MainWindow.buttonTalkSlot)
+        self.menuClose.triggered.connect(MainWindow.close)
+        QtCore.QMetaObject.connectSlotsByName(MainWindow)
+
+    def retranslateUi(self, MainWindow):
+        _translate = QtCore.QCoreApplication.translate
+        MainWindow.setWindowTitle(_translate("MainWindow", "MainWindow"))
+        self.buttonTalk.setText(_translate("MainWindow", "話す"))
+        self.menu_1.setTitle(_translate("MainWindow", "ファイル"))
+        self.menuClose.setText(_translate("MainWindow", "閉じる"))
+
+import qt_resource_rc
